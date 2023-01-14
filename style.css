@@ -1,0 +1,47 @@
+body{
+    margin:0px;
+}
+
+img{
+    height: 500px;
+    width: 100%;
+}
+
+textarea{
+   
+    width: 150px;
+}
+
+
+
+div{
+    margin : 10px 0px 10px ;
+    
+}
+
+.para{
+
+    padding: 50px;
+    border: 2px dotted black;
+}
+
+.para:hover{
+    background-color:blueviolet;
+}
+
+form{
+    padding: 10px;
+}
+
+a:link{
+    color:blue;
+}
+
+a:hover{
+    color:yellow !important;
+}
+
+
+a:visited{
+    color:red;
+}
