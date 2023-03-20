@@ -1,0 +1,18 @@
+
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const input = parseInt(prompt("Enter a number:"));
+const result = isPrime(input) ? "Prime" : "Composite";
+const color = isPrime(input) ? "green" : "red";
+
+document.body.innerHTML = `<h1 style="color: ${color}">${result}</h1>`;

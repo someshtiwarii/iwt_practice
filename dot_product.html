@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script>
+      function calculateDotProduct() {
+        try {
+          var vector1 = document.getElementById("vector1").value.split(",");
+          var vector2 = document.getElementById("vector2").value.split(",");
+
+          if (vector1.length != vector2.length) {
+            throw "Vectors have different dimensions";
+          }
+
+          var dotProduct = 0;
+          for (var i = 0; i < vector1.length; i++) {
+            dotProduct += vector1[i] * vector2[i];
+          }
+
+          document.getElementById("result").innerHTML = "Dot product: " + dotProduct;
+        } catch (error) {
+          document.getElementById("result").innerHTML = "Error: " + error;
+        } finally {
+          console.log("Calculation finished");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Vector 1: <input type="text" id="vector1"><br><br>
+    Vector 2: <input type="text" id="vector2"><br><br>
+    <button onclick="calculateDotProduct()">Calculate dot product</button><br><br>
+    <div id="result"></div>
+  </body>
+</html>

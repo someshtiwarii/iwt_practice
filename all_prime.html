@@ -1,0 +1,28 @@
+const isPrime = num => {
+    if (num <= 1) {
+      return false;
+    }
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  };
+  
+  const getPrimes = (start, end) => {
+    let primes = [];
+    for (let i = start; i <= end; i++) {
+      if (isPrime(i)) {
+        primes.push(i);
+      }
+    }
+    return primes;
+  };
+  
+  const start = parseInt(prompt("Enter the starting number:"));
+  const end = parseInt(prompt("Enter the ending number:"));
+  const primes = getPrimes(start, end);
+  
+  document.body.innerHTML = `<h1>Prime numbers between ${start} and ${end}:</h1>
+    <p>${primes.join(", ")}</p>`;

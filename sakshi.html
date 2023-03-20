@@ -1,0 +1,274 @@
+<!-- This is doctype -->
+<!DOCTYPE html>
+<!-- our html starts here-->
+<html lang="en">
+<!-- our head starts here-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is description">
+    <meta name="keywords" content="html, html tutorials, web development">
+    <meta name="robots" contents="INDEX , FOLLOW">
+    <title>Document</title>
+    <!-- this is how you include external css -->
+    <link rel="stylesheet" href="sakshi.css">
+
+    <!-- this is how you include external javascript -->
+    <script src="sakshi.js"></script>
+</head>
+<!-- our body starts here-->
+
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    <p>This is Sakshi</p>
+
+    <!-- sentence bhr na nikle iske liye command palette->(write) toggle word wrap  -->
+    <!-- this is the power of emmet -->
+    <!-- p*4 karne pr 4 <p></p> aise khud aajaenge -->
+    <!-- lorem40 for 40 words , lorem23 for 23 words etc-->
+    <p>Lorem, ipsum dolor sit <strong>amet consectetur adipisicing elit.</strong>Laboriosam molestiae quibusdam iusto
+        ipsa mollitia nemo ab deserunt voluptate. Animi, assumenda. <em>Vitae aspernatur maxime dignissimos</em>
+        aspernatur , <b> bold kar dega</b> hic ratione repellat atque nesciunt illum unde reprehenderit
+        <i>italic</i>repudiandae, voluptate nihil officiis, rem dolorum amet? Iure!
+        <!-- b ki jgh bold krne k lie strong and  i ki jgh italic karne k liye em ka use kare -->
+    </p>
+    <p>first
+        <!-- for breaking the line, br is self closing tag, this is not a good technique to break the line -->
+        <br>
+        this is new line
+        <!-- hr -> horizontal ruler, ek line kheech dega , self closing tag  -->
+        <hr>
+    </p>
+    <p>second</p>
+    <!-- ctrl+enter = new line -->
+    <!-- a is tag and href is attribute -->
+    <!-- agr Alt press kiye rahe ar fr jaha jaha click karenge to vaha vaha cursor blink hone lagega, fir type krenge to sb jgh likh jaega-->
+    <a href="https://google.com" target="_blank">go to google</a>
+    <br>
+    <!-- target=_blank karne se nayi tab pr khulegi website jo b hm link diye honge -->
+    <a href="https://facebook.com" target="_blank">go to facebook</a><br>
+    <!-- give internal link -->
+    <a href="/first_demo.html" target="_blank">first_demo</a>
+
+    <!-- Image is not present  hence alt text is shown -->
+    <img src="sakshi.jpeg" alt="Error loading image"><br>
+    <img src="https://unsplash.com/photos/UyQmFiAV_FI" alt="remote images" width="400" height="400">
+
+    <!-- but yaha pr picture ki width or height set krna is not a good practice ye hm css k through krenge -->
+    <!-- system pr downloaded image ko b link krna h hme iske bd -->
+
+    <!-- tables and list -->
+    <ul>
+        <!-- <ul type="disc/square/circle de skte h"></ul> -->
+        <li>this is first item of my unordered list</li>
+        <li>this is first item of my unordered list</li>
+        <!-- list inside list -->
+
+        <ul>
+            <li>another one</li>
+            <li>another two</li>
+        </ul>
+
+        <li>this is first item of my unordered list</li>
+    </ul>
+    <ol>
+        <!-- by default ol me 1,2,3 kr k aata h ,agr hm yaha <ol type="i"> kr de roman me aajaega, agr type="I" kr de to ye b roman me agr type="a"to small abc kr aega A kr de to ABC krk aayega -->
+
+        <li>this is first item of my ordered list</li>
+        <li>this is first item of my ordered list</li>
+        <li>this is first item of my ordered list</li>
+    </ol>
+    <!-- table -->
+
+    <h3>HTML TABLE</h3>
+    <table>
+        <thead>
+            <tr>
+                <!-- ek row k andr columns add krne k liye -->
+                <th>Name</th>
+                <th>Employee ID</th>
+                <th>Employee role</th>
+            </tr>
+=
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <!-- Dta ko dalne k liye -->
+                    Sakshi
+                </td>
+                <td>25</td>
+                <td>Student</td>
+            </tr>
+            <tr>
+                <td>Akansha</td>
+                <td>94</td>
+                <td>Machuarin</td>
+            </tr>
+            <tr>
+                <td>Sweety </td>
+                <td>80</td>
+                <td>Padhaku</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+    <!-- form -->
+    <form action="backend.php">
+        <!-- backend.php ka mtlb backend.php k ps jao ar is data ko vaha submit kr do -->
+        <div>
+            <label for="name">Name</label>
+            <!-- for isequal me vo id aati h jiska label h ye yaha pr id name h  -->
+        </div>
+        <div>
+            <input type="text" name="myName" id="name">
+            <!-- div k andr dlne se input tag mera inline element h, span ek inline element h   -->
+        </div>
+        <br>
+        <div>Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="myEmail">
+            <!-- name vo nm hai jisase aapka backend is tag ko phchanega, ye tarreka h is myEmail ki value ko lene ka -->
+        </div>
+        <br>
+        <br>
+        <div>
+            <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            <input type="number" name="myNumber">
+        </div>
+
+        <div>
+            <label for="checkbox"> Are you eligible ?</label>
+        </div>
+        <div>
+            <input type="checkbox" name="myEligibility" id="checkbox">
+            <!-- <input type="checkbox" name="myEligibility" id="checkbox" checked>  -->
+            <!-- checked laga diya to mera checkbox hmesha checked rahega    -->
+        </div>
+        <br>
+        <div>
+            Gender: Male <intput type="radio" name="myGender">female <intput type="radio" name="myGender"></intput>
+                <!-- agr nm ek h to kisi ek ko hi select kr skte h -->
+        </div>
+        <br>
+        <div>
+            Write about yourself :<textarea name="myText" id="" cols="30" rows="10"></textarea>
+
+        </div>
+        <br>
+        <div>
+            <!-- for me vi jaega jo id me hoga , id vi honi chahiye jo for me h-->
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind">Indica</option>
+                <!-- by default k lie selected likh dete h  -->
+                <!-- <option value="ind"selected>Indica</option> -->
+                <option value="swf">Swift</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+
+
+            <input type="reset" value="Reset Now">
+        </div>
+
+
+
+    </form>
+    <!-- inline and block elements -->
+    <!-- paragraph <p> block element hota h, iska mtlb vo sari jgh le leta h jitni 
+        jgh milti h usko width me , agla koi b element h vo uske bd me aaega ex- div, p -->
+        <p style="border : 2px solid red;">this is p</p>
+        <p style="border : 2px solid blue;"> this is also p</p>
+        <span style="border : 2px solid red;"> this is span</span>
+        <span style="border : 2px solid blue;">this is also span</span>
+        <!-- span inline element h ex span, strong, anchor -->
+
+        <strong style="border : 2px solid red;">this is p</strong>
+        <a style="border : 2px solid blue;"> this is also p</a>
+        <span style="border : 2px solid red;"> this is span</span>
+        <span style="border : 2px solid blue;">this is also span</span>
+    
+        <!-- Ids and Classes in HTML -->
+        <h3>Ids and Classes In HTML</h3>
+        <div id="mainBox" class="redBg">
+            this is mainbox
+            </div>
+            <span class="redBg"></span>
+            <!-- id = identifier, ek id sirf ek hi element ko milegi, lekin class k sth aisa ni h -->
+            <!-- ek sth dher sare elements  me same changes krna, tb class km aati h, ar ye jo red bg vali class
+                 h ye hm jis element ko denge uske andr ye sari properties aajaengi-->
+            <!-- <div id="mainBox" class ="redBg blackBorder"></div> class me jitna mn chahe utna bdha skte 
+                h mtlb ek element ko multiple classes de skte h vo sari properties is div(element) k andr aajaengi -->
+             <!-- el element multiple classes le skta h ar ek class multiple elements me hoskti h -->
+             <!-- Emmet -->
+             <!-- . is for class and # is for id -->
+             <span class ="redBG"></span>
+             <!-- span#spanId ->enter -->
+             <span id="mainSpan"> </span>
+             <!-- div.redBg.blackBorder.anotherClass -->
+             <div class="redBg blackBorder anotherClass"></div>
+             <!-- emmet takes div tag as default -->
+             <!-- agr sirf .blackbackground likhe + enter  to automatic class bna kr de dega -->
+             <div class="blacbackground"></div>
+
+             <!-- creating multiple elements using emmet -->
+             <!-- span.myClass.myClass2.myClass3*4 + <tab> to print 4 similar elements using emmet -->
+                <span class="myClass myClass2 myClass3">first </span>
+                <span class="myClass myClass2 myClass3">second </span>
+                <span class="myClass myClass2 myClass3">third </span>
+                <span class="myClass myClass2 myClass3">fourth </span>
+             </div>
+         <!-- html ENTITIES (reserved keywords ko use k lie use hota h)-->
+         <!-- "this is another         paragraph" , agr hm khud se space aise dede tbbi ye
+        "this is another paragraph" aise print krega-->
+
+        <!-- iske liye &nbsp; lagana pdega -->
+        <div class="container">
+        <p>thus is another &nbsp; paragraph</p>
+        <!-- &nbsp; is not professional -->
+
+        <!-- agr hm paragraph me hi <p> likhna chahe to vo hm ni likh paenge qki html
+             use tag hi smjhega to uske liye -->
+        <p>paragraph is written like this &lt;p&gt;</p>
+        <p>pound is written like this &pound;</p>
+        <p>copyright is written like this &copy;</p>
+        <p> this is written like this &frac14;</p>
+        <p>Empty character is written like this &#8203;</p>
+        <p>another character is &rAarr;</p>
+        </div>
+
+        <!-- semantic elements in html ex- articles, aside,footer , header, nav, summary etc -->
+        <details>
+            <summary>I have hijk kolp gth jikkk sdhvbhjghd hevfbjhgf jgeruk 
+            dhsvhsdb
+            sfbhjvd
+            sdjvbsjvb
+            sdvjbsjdvbnks
+            sjdvbjsdv
+            jsddbjks
+            </summary>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta suscipit aliquam illum quidem, similique tempora id dignissimos deleniti asperiores praesentium dolore voluptatibus,
+             officia nulla fugiat iste! Minus, esse error tenetur id natus eos provident!
+
+        </details>
+
+</body>
+
+</html>

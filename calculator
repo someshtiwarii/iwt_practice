@@ -1,0 +1,60 @@
+const addMatrices = (matrix1, matrix2) => {
+  try {
+    if (matrix1.length !== matrix2.length || matrix1[0].length !== matrix2[0].length) {
+      throw "Matrix sizes are not compatible for addition.";
+    }
+    const result = [];
+    for (let i = 0; i < matrix1.length; i++) {
+      result.push([]);
+      for (let j = 0; j < matrix1[0].length; j++) {
+        result[i][j] = matrix1[i][j] + matrix2[i][j];
+      }
+    }
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+};
+
+const subtractMatrices = (matrix1, matrix2) => {
+  try {
+    if (matrix1.length !== matrix2.length || matrix1[0].length !== matrix2[0].length) {
+      throw "Matrix sizes are not compatible for subtraction.";
+    }
+    const result = [];
+    for (let i = 0; i < matrix1.length; i++) {
+      result.push([]);
+      for (let j = 0; j < matrix1[0].length; j++) {
+        result[i][j] = matrix1[i][j] - matrix2[i][j];
+      }
+    }
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+};
+
+const multiplyMatrices = (matrix1, matrix2) => {
+  try {
+    if (matrix1[0].length !== matrix2.length) {
+      throw "Matrix sizes are not compatible for multiplication.";
+    }
+    const result = [];
+    for (let i = 0; i < matrix1.length; i++) {
+      result.push([]);
+      for (let j = 0; j < matrix2[0].length; j++) {
+        let sum = 0;
+        for (let k = 0; k < matrix1[0].length; k++) {
+          sum += matrix1[i][k] * matrix2[k][j];
+        }
+        result[i][j] = sum;
+      }
+    }
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+};
